@@ -1,0 +1,29 @@
+.portfolio__menu-list{
+    @include centeredFlex ();
+    margin-bottom: 50px;
+}
+
+.menu-list__item{
+   margin-left: 10px; 
+   &:last-child{
+    margin-right: 0;
+   }
+}
+.menu-list__button{
+    @extend %button;
+    background-color: #F5F4FA;
+  
+
+        @include transition (color);
+        @include transition (background-color);
+        @include transition (box-shadow);
+
+    
+    &:hover{
+        background-color: var(--third-color);
+        color: var(--fourth-color);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+}
